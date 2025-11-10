@@ -1,6 +1,7 @@
 import { currencyFormatter } from "../util/formatting";
+import Button from './UI/Button.jsx'
 
-export default function MealItem({meal, onClick}) {
+export default function MealItem({meal}) {
   return <li className='meal-item'>
     <article>
       <img src={`http://localhost:3000/${meal.image}`} alt={meal.name} />
@@ -10,7 +11,7 @@ export default function MealItem({meal, onClick}) {
         <p className='meal-item-description'>{meal.description}</p>
       </div>
       <p className="meal-item-actions">
-        <button onClick={meal}>Add meal to basket</button>
+        <Button>Add meal to basket</Button>
       </p>
     </article>
   </li>
